@@ -95,11 +95,11 @@ func NewAgentClient(user, password, ipPort string, opts ...Option) (client Agent
 	}
 
 	agent.options = ConfigurationOptions{
-		OutputFormat:           OptionsOutputFormatJson,
-		ShowPrompt:             false,
-		NotifyProgress:         true,
-		NotifyProgressInterval: 1,
+		OutputFormat:   OptionsOutputFormatJson,
+		ShowPrompt:     false,
+		NotifyProgress: false,
 	}
+
 	agent._Options(opts...)
 
 	err = agent.Start()
